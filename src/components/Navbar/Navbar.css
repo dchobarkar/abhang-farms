@@ -1,0 +1,9 @@
+#abhangfarmsnavbar .NavLink {
+  color: black;
+  text-decoration: none;
+}
+
+#abhangfarmsnavbar .NavLink:hover {
+  color: black;
+  text-decoration: none;
+}

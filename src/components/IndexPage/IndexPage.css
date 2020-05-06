@@ -1,0 +1,20 @@
+#indexpage {
+  padding: 4% 0;
+}
+#indexpage h2 {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 2%;
+}
+#indexpage .col-lg-4 {
+  padding-bottom: 4%;
+}
+
+#indeximage {
+  width: 100%;
+  height: 100%;
+}
+
+#cardimage {
+  height: 200px;
+}
