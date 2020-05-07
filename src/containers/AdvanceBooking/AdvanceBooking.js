@@ -76,7 +76,7 @@ class AdvanceBooking extends Component {
             Two_Kg: this.state.twokg,
             Total: this.state.total,
         }
-        axios.post("https://formspree.io/meqrqwzg", order)
+        axios.post("https://formspree.io/mdowovwq", order)
             .then(response => {
                 this.setState({
                     success: true

@@ -25,7 +25,7 @@ class Contact extends Component {
 
     mailSubmitHandler = (e) => {
         e.preventDefault();
-        axios.post("https://formspree.io/dchobarkar@gmail.com", this.state)
+        axios.post("https://formspree.io/mnqgqygy", this.state)
             .then(response => {
                 this.setState({ formsubmitted: true })
             })
