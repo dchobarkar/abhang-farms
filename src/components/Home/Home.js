@@ -1,4 +1,5 @@
 import React from 'react';
+
 import CarouSel from '../Carousel/Carousel';
 import IndexPage from '../IndexPage/IndexPage';
 import About from '../About/About';
@@ -15,4 +16,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Home;

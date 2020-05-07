@@ -1,5 +1,52 @@
+#capsicumadvertisement h3 {
+  padding: 2% 0;
+  text-align: center;
+  width: 100%;
+}
+#capsicumadvertisement .point {
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 5px;
+}
+#capsicumadvertisement .divider {
+  width: 100%;
+  padding: 5% 20px;
+}
+
+.capsicumimage .rounded-circle {
+  width: 100%;
+}
+
+#capsicumvisuals {
+  padding-top: 4%;
+}
+#capsicumvisuals h5 {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 2%;
+}
+#capsicumvisuals .circle {
+  text-align: center;
+  border: 1px solid skyblue;
+  border-radius: 50%;
+  width: 70px;
+  padding: 10px;
+  margin: auto;
+}
+
+#advancebooking h3 {
+  width: 100%;
+  text-align: center;
+  padding-top: 2%;
+}
+#advancebooking p {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 2%;
+}
+
 #advancebookingcard {
-  margin: 10px;
+  min-width: 180px;
+  margin: 25px;
   text-align: center;
 }
 #advancebookingcard Button {
@@ -11,6 +58,12 @@
   width: 100%;
   text-align: center;
   font-size: large;
+}
+
+#advancebookingbutton {
+  width: 100px;
+  margin: 0 auto;
+  margin-bottom: 2%;
 }
 
 .fa-box-open {

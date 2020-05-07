@@ -3,3 +3,10 @@
   text-align: center;
   padding: 4% 0;
 }
+
+#contactform .col-lg-8 {
+  padding: 4% 2%;
+}
+#contactform .col-lg-4 {
+  padding: 2% 15%;
+}

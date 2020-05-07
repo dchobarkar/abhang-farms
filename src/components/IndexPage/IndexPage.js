@@ -6,7 +6,7 @@ import './IndexPage.css';
 
 const IndexPage = () => {
     return (
-        <div className="container">
+        <div className="container fullscreen">
             <div id="indexpage" className="row">
 
                 <h2>Welcome to अभंग Farms</h2>

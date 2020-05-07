@@ -1,7 +1,11 @@
 #footer {
   background: rgba(0, 0, 0, 0.6);
-  padding: 7px 5px;
+  padding: 10px;
 }
 #footer .row {
-  justify-content: center;
+  text-align: center;
+}
+
+.fa-heart {
+  color: white;
 }

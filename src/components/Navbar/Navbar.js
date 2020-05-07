@@ -8,6 +8,7 @@ class NavBar extends Component {
     nextPage = (path) => {
         this.props.history.push(path)
     }
+
     render() {
         return (
             <Navbar collapseOnSelect id="abhangfarmsnavbar" expand="md">
@@ -16,20 +17,21 @@ class NavBar extends Component {
                         अभंग Farms
                     </NavLink>
                 </Navbar.Brand>
+
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
-                        <Nav.Link onClick={() => this.nextPage("/")} className="nav-link">Home</Nav.Link>
-                        <Nav.Link onClick={() => this.nextPage("/gallery")} className="nav-link">Gallery</Nav.Link>
-                        <Nav.Link onClick={() => this.nextPage("/advancebooking")}>Advance Booking</Nav.Link>
-                        <Nav.Link onClick={() => this.nextPage("/")} href="#about">About</Nav.Link>
-                        <Nav.Link onClick={() => this.nextPage("/")} href="#contact">Contact Us</Nav.Link>
+                        <Nav.Link onClick={() => this.nextPage("/")} href="#1" className="nav-link">Home</Nav.Link>
+                        <Nav.Link onClick={() => this.nextPage("/gallery")} href="#2" className="nav-link">Gallery</Nav.Link>
+                        <Nav.Link onClick={() => this.nextPage("/advancebooking")} href="#3" className="nav-link">Advance Booking</Nav.Link>
+                        <Nav.Link onClick={() => this.nextPage("/")} href="#about" className="nav-link">About</Nav.Link>
+                        <Nav.Link onClick={() => this.nextPage("/")} href="#contact" className="nav-link">Contact Us</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar >
-
         )
     }
 }
+
 export default withRouter(NavBar);

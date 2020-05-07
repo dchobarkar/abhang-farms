@@ -1,5 +1,20 @@
-#about h2 {
+#abouttitle {
+  background-image: url(../../assests/abouttitle.JPG);
+  background-size: 100% 100%;
+  color: white;
+  height: 250px;
+  max-height: 50vh;
+}
+#abouttitle h2 {
   width: 100%;
+  text-align: end;
+  padding: 4% 2%;
+}
+#about p {
   text-align: center;
-  padding: 4% 0;
+  padding: 4%;
+  /* white-space: pre; */
+}
+#about .row {
+  margin: 0;
 }

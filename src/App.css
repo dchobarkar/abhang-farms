@@ -1,0 +1,25 @@
+.fullscreen {
+  min-height: 84vh;
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+.inputfield .form-control {
+  border: none;
+  border-radius: 0%;
+  border-bottom: 2px solid #ccc;
+  font: inherit;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.inputfield .form-control:focus {
+  box-shadow: none;
+  border-color: #ccc;
+}
+.inputfield .form-control:invalid {
+  border-bottom: 1px solid red;
+}

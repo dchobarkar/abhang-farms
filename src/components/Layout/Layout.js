@@ -1,10 +1,13 @@
 import React from 'react';
-import NavBar from '../Navbar/Navbar';
-import Footer from '../Footer/Footer';
-import AdvanceBooking from '../../containers/AdvanceBooking/AdvanceBooking';
-import Gallery from '../../containers/Gallery/Gallery';
 import { Route } from 'react-router-dom';
+
+import NavBar from '../Navbar/Navbar';
+
 import Home from '../Home/Home';
+import Gallery from '../../containers/Gallery/Gallery';
+import AdvanceBooking from '../../containers/AdvanceBooking/AdvanceBooking';
+
+import Footer from '../Footer/Footer';
 
 const Layout = () => {
     return (

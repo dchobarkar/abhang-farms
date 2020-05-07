@@ -1,6 +1,5 @@
 #gallery .col-md-4 {
   padding: 0;
-  height: 250px;
 }
 #gallery .col-md-4:after {
   position: absolute;
@@ -19,7 +18,6 @@
 #gallery .col-md-4:hover:after {
   opacity: 0.5;
 }
-
 #modelimage {
   width: 100%;
   height: 100%;
