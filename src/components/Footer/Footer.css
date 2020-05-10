@@ -1,11 +1,9 @@
 #footer {
+  color: #edf5e1;
   background: rgba(0, 0, 0, 0.6);
   padding: 10px;
 }
-#footer .row {
-  text-align: center;
-}
 
 .fa-heart {
-  color: white;
+  color: red;
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Modal } from 'react-bootstrap';
 
-
 const DModal = (props) => (
     <Modal centered
         show={props.show}

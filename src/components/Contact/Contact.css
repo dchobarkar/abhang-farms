@@ -1,12 +1,10 @@
+#contact {
+  padding-top: 50px;
+  padding-bottom: 2%;
+}
 #contact h2 {
   width: 100%;
   text-align: center;
-  padding: 4% 0;
-}
-
-#contactform .col-lg-8 {
-  padding: 4% 2%;
-}
-#contactform .col-lg-4 {
-  padding: 2% 15%;
+  padding: 2% 0;
+  color: #edf5e1;
 }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import { Carousel } from 'react-bootstrap';
 
 import './Carousel.css';
@@ -17,7 +16,7 @@ class CarouSel extends Component {
 
     render() {
         return (
-            <Carousel activeIndex={this.state.index} onSelect={(e) => this.selectHandler()}>
+            <Carousel controls={false} indicators={false} interval={3000} id="carousel" activeIndex={this.state.index} onSelect={(e) => this.selectHandler()}>
                 <Carousel.Item >
                     <img
                         className="carouselimg"

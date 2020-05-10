@@ -1,3 +1,36 @@
-#abhangfarmsnavbar .navbar-brand a {
-  color: black;
+#abhangfarmsnavbar {
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+}
+#abhangfarmsnavbar a.nav-link {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+}
+#abhangfarmsnavbar a.active {
+  color: rgb(3, 9, 15);
+}
+
+.navbarup {
+  background-color: rgba(92, 219, 149, 0.7);
+  transition: 0.3s all ease-out;
+}
+.navbarup .navbar-brand a {
+  color: #05386b;
+}
+.navbarup .navbar-nav a.nav-link {
+  color: #05386b;
+}
+
+.navbardown {
+  background: rgba(0, 0, 0, 0.6);
+  transition: 0.3s all ease-out;
+}
+.navbardown .navbar-brand a {
+  color: #edf5e1;
+}
+.navbardown .navbar-nav a.nav-link {
+  color: #edf5e1;
 }

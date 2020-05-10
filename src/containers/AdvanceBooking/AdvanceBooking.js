@@ -3,11 +3,16 @@ import { Card, CardDeck, Button, Image, Form, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 
 import DModal from '../../components/DModal/DModal';
+import FaedInSection from '../../containers/FadeInSection/FadeInSection';
 
 import './AdvanceBooking.css';
+import FadeInSection from '../../containers/FadeInSection/FadeInSection';
 
 class AdvanceBooking extends Component {
     state = {
+        name: '',
+        mobile: '',
+        address: '',
         smallpacket: 0,
         mediumpacket: 0,
         onekg: 0,
@@ -22,7 +27,6 @@ class AdvanceBooking extends Component {
             [e.target.name]: e.target.value
         })
     }
-
 
     packetHandler = (packet) => {
         if (packet === 'smallpacket') {
@@ -79,7 +83,15 @@ class AdvanceBooking extends Component {
         axios.post("https://formspree.io/mdowovwq", order)
             .then(response => {
                 this.setState({
-                    success: true
+                    success: true,
+                    name: '',
+                    mobile: '',
+                    address: '',
+                    smallpacket: '',
+                    mediumpacket: '',
+                    onekg: '',
+                    twokg: '',
+                    total: ''
                 })
             })
             .catch(error => {
@@ -92,166 +104,212 @@ class AdvanceBooking extends Component {
         disable = this.state.total ? false : true
         return (
             <div className="container fullscreen">
-                <div id="capsicumadvertisement" className="row">
+                <div id="advancebooking" className="row">
+
+                    <FaedInSection>
+                        <h3>Order here</h3>
+                    </FaedInSection>
+
+                    <FaedInSection>
+                        <p><i className="fas fa-truck-loading"></i> Get fresh picked Capsicum from field directly at your doorsteps. </p>
+                    </FaedInSection>
+
+                    <CardDeck>
+                        <Card id="advancebookingcard">
+                            <FadeInSection>
+                                <Card.Body>
+                                    <Card.Title>Small packet of 3 Capsicum</Card.Title>
+                                    <br />
+                                    <i className="fas fa-box-open"></i>
+                                    <Card.Text>Rs. 1</Card.Text>
+                                    {this.state.smallpacket > 0 ? <p>Smallpacket : {this.state.smallpacket}</p> : <><br /><br /></>}
+                                </Card.Body>
+                                <Card.Footer>
+                                    <Button
+                                        variant="light"
+                                        onClick={() => this.packetHandler("smallpacket")}>Add</Button>
+                                </Card.Footer>
+                            </FadeInSection>
+                        </Card>
+
+                        <Card id="advancebookingcard">
+                            <FadeInSection>
+                                <Card.Body>
+                                    <Card.Title>Medium packet of 6 Capsicum</Card.Title>
+                                    <br />
+                                    <i className="fas fa-box-open"></i>
+                                    <Card.Text>Rs. 2</Card.Text>
+                                    {this.state.mediumpacket > 0 ? <p>Mediumpacket : {this.state.mediumpacket}</p> : <><br /><br /></>}
+                                </Card.Body>
+                                <Card.Footer>
+                                    <Button
+                                        variant="light"
+                                        onClick={() => this.packetHandler("mediumpacket")}>Add</Button>
+                                </Card.Footer>
+                            </FadeInSection>
+                        </Card>
+
+                        <Card id="advancebookingcard">
+                            <FadeInSection>
+                                <Card.Body>
+                                    <Card.Title>1 Kg Packet</Card.Title>
+                                    <br />
+                                    <br />
+                                    <i className="fas fa-box-open"></i>
+                                    <Card.Text>Rs. 3</Card.Text>
+                                    {this.state.onekg > 0 ? <p>1 Kg : {this.state.onekg}</p> : <><br /><br /></>}
+                                </Card.Body>
+                                <Card.Footer>
+                                    <Button
+                                        variant="light"
+                                        onClick={() => this.packetHandler("onekg")}>Add</Button>
+                                </Card.Footer>
+                            </FadeInSection>
+                        </Card>
+
+                        <Card id="advancebookingcard">
+                            <FadeInSection>
+                                <Card.Body>
+                                    <Card.Title>2 Kg Packet</Card.Title>
+                                    <br />
+                                    <br />
+                                    <i className="fas fa-box-open"></i>
+                                    <Card.Text>Rs. 4</Card.Text>
+                                    {this.state.twokg > 0 ? <p>2 Kg : {this.state.twokg}</p> : <><br /><br /></>}
+                                </Card.Body>
+                                <Card.Footer>
+                                    <Button
+                                        variant="light"
+                                        onClick={() => this.packetHandler("twokg")}>Add</Button>
+                                </Card.Footer>
+                            </FadeInSection>
+                        </Card>
+                    </CardDeck>
+
+                    <FadeInSection>
+                        <p id="advancebookingtotal">Total : Rs. {this.state.total > 0 ? this.state.total : 0}</p>
+                    </FadeInSection>
                     <div className="col-lg-12">
+                        <FadeInSection>
+                            <Button
+                                disabled={disable}
+                                className="float-right"
+                                variant="outline-dark"
+                                onClick={this.modalHandler}>
+                                Order
+                            </Button>
+                        </FadeInSection>
+                    </div>
+                </div>
+
+
+                <div id="capsicumadvertisement" className="row d-flex align-items-center">
+                    <FadeInSection>
                         <h3>Health benifits of Capsicum</h3>
-                        <div className="divider">
-                            <p className="float-left point">Prevents Cancer</p>
-                            <p className="float-right point">Gives a healthy heart</p>
-                        </div>
-                        <div className="divider" >
-                            <p className="float-left point">Cures yellow fever</p>
-                            <p className="float-right point">Gives glowing skin</p><br />
-                        </div>
-                        <div className="capsicumimage row">
-                            <div className="col-lg-4"></div>
-                            <div className="col-lg-4">
-                                <Image src={require("../../assests/capsicumadvertisement.jpg")} alt="Capsicum Image" roundedCircle />
-                            </div>
-                            <div className="col-lg-4"></div>
-                        </div>
-                        <div className="divider">
-                            <p className="float-left point">Helps alleviate Crohn's disease</p>
-                            <p className="float-right point">Improves overall health</p>
-                        </div>
-                        <div className="divider">
-                            <p className="float-left point">Alleviates menopausal symptoms</p>
-                            <p className="float-right point">Reduces arthritic pain</p>
-                        </div>
+                    </FadeInSection>
+
+                    <div className="col-md-6">
+                        <FadeInSection>
+                            <Image id="indeximage" src={require("../../assests/capsicumadvertisement.jpg")} alt="Capsicum" rounded />
+                        </FadeInSection>
+                    </div>
+
+                    <div className="col-md-6">
+                        <FadeInSection>
+                            <ul>
+                                <li>Prevents Cancer.</li>
+                                <li>Gives a healthy heart.</li>
+                                <li>Cures yellow fever.</li>
+                                <li>Gives glowing skin.</li>
+                                <li>Improves overall health.</li>
+                                <li>Alleviates menopausal symptoms.</li>
+                                <li>Reduces arthritic pain.</li>
+                            </ul>
+                        </FadeInSection>
                     </div>
                 </div>
 
                 <div id="capsicumvisuals" className="row">
-                    <h5>Nutritional facts Per 100 Grams</h5>
-                    <div className="col-lg-3">
-                        <p className="circle">40</p>
-                        <p className="center">Calories</p>
+                    <FadeInSection>
+                        <h3>Nutritional facts Per 100 Grams</h3>
+                    </FadeInSection>
+                    <div className="col-xs-3">
+                        <FadeInSection>
+                            <p className="circle">40</p>
+                            <p className="center">Calories</p>
+                        </FadeInSection>
                     </div>
-                    <div className="col-lg-3">
-                        <p className="circle">0.2 g</p>
-                        <p className="center">Total Fat</p>
+                    <div className="col-xs-3">
+                        <FadeInSection>
+                            <p className="circle">0.2 g</p>
+                            <p className="center">Total Fat</p>
+                        </FadeInSection>
                     </div>
-                    <div className="col-lg-3">
-                        <p className="circle">7 mg</p>
-                        <p className="center">Sodium</p>
+                    <div className="col-xs-3">
+                        <FadeInSection>
+                            <p className="circle">7 mg</p>
+                            <p className="center">Sodium</p>
+                        </FadeInSection>
                     </div>
-                    <div className="col-lg-3">
-                        <p className="circle">340 mg</p>
-                        <p className="center">Potassium</p>
+                    <div className="col-xs-3">
+                        <FadeInSection>
+                            <p className="circle">9 g</p>
+                            <p className="center">Total Carbohydrate</p>
+                        </FadeInSection>
                     </div>
-                    <div className="col-lg-3">
-                        <p className="circle">9 g</p>
-                        <p className="center">Total Carbohydrate</p>
+                    <div className="col-xs-3">
+                        <FadeInSection>
+                            <p className="circle">340 mg</p>
+                            <p className="center">Potassium</p>
+                        </FadeInSection>
                     </div>
-                    <div className="col-lg-3">
-                        <p className="circle">2 g</p>
-                        <p className="center">Protein</p>
+                    <div className="col-xs-3">
+                        <FadeInSection>
+                            <p className="circle">2 g</p>
+                            <p className="center">Protein</p>
+                        </FadeInSection>
                     </div>
 
-                    <h5>Vitamins and Minerals</h5>
-                    <div className="col-lg-3">
-                        <p className="circle">23 %</p>
-                        <p className="center">Vitamin A</p>
+                    <FadeInSection>
+                        <h3>Vitamins and Minerals</h3>
+                    </FadeInSection>
+
+                    <div className="col-xs-3">
+                        <FadeInSection>
+                            <p className="circle">23 %</p>
+                            <p className="center">Vitamin A</p>
+                        </FadeInSection>
                     </div>
-                    <div className="col-lg-3">
-                        <p className="circle">0.01</p>
-                        <p className="center">Calcium</p>
+                    <div className="col-xs-3">
+                        <FadeInSection>
+                            <p className="circle">404 %</p>
+                            <p className="center">Vitamin C</p>
+                        </FadeInSection>
                     </div>
-                    <div className="col-lg-3">
-                        <p className="circle">404 %</p>
-                        <p className="center">Vitamin C</p>
+                    <div className="col-xs-3">
+                        <FadeInSection>
+                            <p className="circle">0.01</p>
+                            <p className="center">Calcium</p>
+                        </FadeInSection>
                     </div>
-                    <div className="col-lg-3">
-                        <p className="circle">6 %</p>
-                        <p className="center">Iron</p>
+                    <div className="col-xs-3">
+                        <FadeInSection>
+                            <p className="circle">6 %</p>
+                            <p className="center">Iron</p>
+                        </FadeInSection>
                     </div>
-                    <div className="col-lg-3">
-                        <p className="circle">15 %</p>
-                        <p className="center">Vitamin B-6</p>
+                    <div className="col-xs-3">
+                        <FadeInSection>
+                            <p className="circle">15 %</p>
+                            <p className="center">Vitamin B-6</p>
+                        </FadeInSection>
                     </div>
-                    <div className="col-lg-3">
-                        <p className="circle">6 %</p>
-                        <p className="center">Magnesuim</p>
+                    <div className="col-xs-3">
+                        <FadeInSection>
+                            <p className="circle">6 %</p>
+                            <p className="center">Magnesuim</p>
+                        </FadeInSection>
                     </div>
-                </div>
-
-                <div id="advancebooking" className="row">
-                    <h3>Order here</h3>
-                    <p><i className="fas fa-truck-loading"></i> Get fresh picked Capsicum from field directly at your doorsteps. </p>
-
-                    <CardDeck>
-                        <Card id="advancebookingcard">
-                            <Card.Body>
-                                <Card.Title>Small packet of 3 Capsicum</Card.Title>
-                                <br />
-                                <i className="fas fa-box-open"></i>
-                                <Card.Text>Rs. 1</Card.Text>
-                                {this.state.smallpacket > 0 ? <p>Smallpacket : {this.state.smallpacket}</p> : <><br /><br /></>}
-                            </Card.Body>
-                            <Card.Footer>
-                                <Button
-                                    variant="light"
-                                    onClick={() => this.packetHandler("smallpacket")}>Add</Button>
-                            </Card.Footer>
-                        </Card>
-
-                        <Card id="advancebookingcard">
-                            <Card.Body>
-                                <Card.Title>Medium packet of 6 Capsicum</Card.Title>
-                                <br />
-                                <i className="fas fa-box-open"></i>
-                                <Card.Text>Rs. 2</Card.Text>
-                                {this.state.mediumpacket > 0 ? <p>Mediumpacket : {this.state.mediumpacket}</p> : null}
-                            </Card.Body>
-                            <Card.Footer>
-                                <Button
-                                    variant="light"
-                                    onClick={() => this.packetHandler("mediumpacket")}>Add</Button>
-                            </Card.Footer>
-                        </Card>
-
-                        <Card id="advancebookingcard">
-                            <Card.Body>
-                                <Card.Title>1 Kg Packet</Card.Title>
-                                <br />
-                                <br />
-                                <i className="fas fa-box-open"></i>
-                                <Card.Text>Rs. 3</Card.Text>
-                                {this.state.onekg > 0 ? <p>1 Kg : {this.state.onekg}</p> : null}
-                            </Card.Body>
-                            <Card.Footer>
-                                <Button
-                                    variant="light"
-                                    onClick={() => this.packetHandler("onekg")}>Add</Button>
-                            </Card.Footer>
-                        </Card>
-
-                        <Card id="advancebookingcard">
-                            <Card.Body>
-                                <Card.Title>2 Kg Packet</Card.Title>
-                                <br />
-                                <br />
-                                <i className="fas fa-box-open"></i>
-                                <Card.Text>Rs. 4</Card.Text>
-                                {this.state.twokg > 0 ? <p>2 Kg : {this.state.twokg}</p> : null}
-
-                            </Card.Body>
-                            <Card.Footer>
-                                <Button
-                                    variant="light"
-                                    onClick={() => this.packetHandler("twokg")}>Add</Button>
-                            </Card.Footer>
-                        </Card>
-                    </CardDeck>
-
-                    <p id="advancebookingtotal">Total : Rs. {this.state.total}</p>
-                    <Button
-                        disabled={disable}
-                        id="advancebookingbutton"
-                        variant="outline-dark"
-                        onClick={this.modalHandler}>
-                        Order
-                    </Button>
                 </div>
 
                 <DModal
@@ -305,19 +363,14 @@ class AdvanceBooking extends Component {
                                 Confirm Order
                                 </Button>
                         </Form>
-
                     </div>
                 </DModal>
 
                 <DModal
                     show={this.state.success}
                     modalhandler={this.successModalHandler}>
-                    <p className="center">
-                        Your order has been recorded.
-                    </p>
-                    <p className="center">
-                        We will contact you soon.
-                    </p>
+                    <p className="center">Your order has been recorded.</p>
+                    <p className="center">We will contact you soon.</p>
                 </DModal>
             </div >
         )
@@ -325,4 +378,3 @@ class AdvanceBooking extends Component {
 }
 
 export default AdvanceBooking;
-

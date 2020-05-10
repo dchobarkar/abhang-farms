@@ -3,9 +3,11 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  background-color: (240, 248, 248);
 
-  font-family: "Open Sans", sans-serif;
+  color: #05386b;
+  background-color: #5cdb95;
+
+  font-family: "Montserrat";
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

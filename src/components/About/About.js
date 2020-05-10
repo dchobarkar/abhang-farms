@@ -1,5 +1,7 @@
 import React from 'react';
 
+import FadeInSection from '../../containers/FadeInSection/FadeInSection';
+
 import './About.css';
 
 const About = () => {
@@ -7,12 +9,16 @@ const About = () => {
         <div id="about" className="fullscreen">
 
             <div id="abouttitle" className="row d-flex align-items-center">
-                <h2>About अभंग Farms</h2>
+                <FadeInSection>
+                    <h2>About अभंग Farms</h2>
+                </FadeInSection>
             </div>
-
-            <p>In India, 10 Farmers commit suicide everyday. We are on a mission to change that.</p>
+            <FadeInSection>
+                <p>In India, 10 Farmers commit suicide everyday. We are on a mission to change that.</p>
+            </FadeInSection>
         </div>
     )
 }
+
 
 export default About;

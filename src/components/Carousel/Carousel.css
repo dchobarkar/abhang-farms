@@ -1,4 +1,4 @@
 .carouselimg {
-  height: 85vh;
-  width: 100vw;
+  width: 100%;
+  height: auto;
 }

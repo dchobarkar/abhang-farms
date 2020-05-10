@@ -1,7 +1,8 @@
 #abouttitle {
   background-image: url(../../assests/abouttitle.JPG);
-  background-size: 100% 100%;
-  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #edf5e1;
   height: 250px;
   max-height: 50vh;
 }

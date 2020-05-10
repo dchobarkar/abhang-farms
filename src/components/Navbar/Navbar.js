@@ -5,13 +5,28 @@ import { withRouter, NavLink } from 'react-router-dom';
 import "./Navbar.css";
 
 class NavBar extends Component {
+    state = {
+        isTop: true
+    }
+
+    componentDidMount() {
+        document.addEventListener('scroll', () => {
+            const isTop = window.scrollY < 200;
+            if (isTop !== this.state.isTop) {
+                this.setState({
+                    isTop
+                })
+            }
+        })
+    }
+
     nextPage = (path) => {
         this.props.history.push(path)
     }
 
     render() {
         return (
-            <Navbar collapseOnSelect id="abhangfarmsnavbar" expand="md">
+            <Navbar collapseOnSelect id="abhangfarmsnavbar" className={this.state.isTop ? 'navbarup' : 'navbardown'} expand="md">
                 <Navbar.Brand>
                     <NavLink className="nav-link" to="/">
                         अभंग Farms

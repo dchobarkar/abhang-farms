@@ -8,6 +8,7 @@
 }
 
 .inputfield .form-control {
+  background-color: transparent;
   border: none;
   border-radius: 0%;
   border-bottom: 2px solid #ccc;
@@ -17,6 +18,7 @@
   box-sizing: border-box;
 }
 .inputfield .form-control:focus {
+  background-color: transparent;
   box-shadow: none;
   border-color: #ccc;
 }
