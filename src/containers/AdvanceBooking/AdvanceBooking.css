@@ -20,8 +20,9 @@
   width: 100%;
 }
 
-.fa-box-open {
-  font-size: 100px;
+#advancebookingcard img {
+  height: 80%;
+  width: 80%;
 }
 
 #advancebookingtotal {

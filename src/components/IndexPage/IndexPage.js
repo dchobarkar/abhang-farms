@@ -53,7 +53,7 @@ const IndexPage = () => {
 
                 <div className="col-lg-4 mb-3">
                     <FadeInSection>
-                        <a href="" className="hoverfocus">
+                        <a className="hoverfocus">
                             <img
                                 src={require('../../assests/planned.jpeg')}
                                 alt="Card Image"

@@ -29,6 +29,8 @@
   opacity: 0.5;
 }
 .hoverfocus img {
+  width: 100%;
+  height: 250px;
   position: relative;
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;

@@ -29,7 +29,7 @@ class NavBar extends Component {
             <Navbar collapseOnSelect id="abhangfarmsnavbar" className={this.state.isTop ? 'navbarup' : 'navbardown'} expand="md">
                 <Navbar.Brand>
                     <NavLink className="nav-link" to="/">
-                        अभंग Farms
+                        <span id="abhang">अभंग</span> Farms
                     </NavLink>
                 </Navbar.Brand>
 

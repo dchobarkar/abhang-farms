@@ -3,10 +3,9 @@ import { Card, CardDeck, Button, Image, Form, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 
 import DModal from '../../components/DModal/DModal';
-import FaedInSection from '../../containers/FadeInSection/FadeInSection';
+import FadeInSection from '../../containers/FadeInSection/FadeInSection';
 
 import './AdvanceBooking.css';
-import FadeInSection from '../../containers/FadeInSection/FadeInSection';
 
 class AdvanceBooking extends Component {
     state = {
@@ -106,21 +105,21 @@ class AdvanceBooking extends Component {
             <div className="container fullscreen">
                 <div id="advancebooking" className="row">
 
-                    <FaedInSection>
+                    <FadeInSection>
                         <h3>Order here</h3>
-                    </FaedInSection>
+                    </FadeInSection>
 
-                    <FaedInSection>
+                    <FadeInSection>
                         <p><i className="fas fa-truck-loading"></i> Get fresh picked Capsicum from field directly at your doorsteps. </p>
-                    </FaedInSection>
+                    </FadeInSection>
 
                     <CardDeck>
                         <Card id="advancebookingcard">
                             <FadeInSection>
                                 <Card.Body>
                                     <Card.Title>Small packet of 3 Capsicum</Card.Title>
+                                    <Image src={require("../../assests/cap.png")} />
                                     <br />
-                                    <i className="fas fa-box-open"></i>
                                     <Card.Text>Rs. 1</Card.Text>
                                     {this.state.smallpacket > 0 ? <p>Smallpacket : {this.state.smallpacket}</p> : <><br /><br /></>}
                                 </Card.Body>
@@ -136,8 +135,8 @@ class AdvanceBooking extends Component {
                             <FadeInSection>
                                 <Card.Body>
                                     <Card.Title>Medium packet of 6 Capsicum</Card.Title>
+                                    <Image src={require("../../assests/cap.png")} />
                                     <br />
-                                    <i className="fas fa-box-open"></i>
                                     <Card.Text>Rs. 2</Card.Text>
                                     {this.state.mediumpacket > 0 ? <p>Mediumpacket : {this.state.mediumpacket}</p> : <><br /><br /></>}
                                 </Card.Body>
@@ -154,8 +153,8 @@ class AdvanceBooking extends Component {
                                 <Card.Body>
                                     <Card.Title>1 Kg Packet</Card.Title>
                                     <br />
+                                    <Image src={require("../../assests/cap.png")} />
                                     <br />
-                                    <i className="fas fa-box-open"></i>
                                     <Card.Text>Rs. 3</Card.Text>
                                     {this.state.onekg > 0 ? <p>1 Kg : {this.state.onekg}</p> : <><br /><br /></>}
                                 </Card.Body>
@@ -172,8 +171,8 @@ class AdvanceBooking extends Component {
                                 <Card.Body>
                                     <Card.Title>2 Kg Packet</Card.Title>
                                     <br />
+                                    <Image src={require("../../assests/cap.png")} />
                                     <br />
-                                    <i className="fas fa-box-open"></i>
                                     <Card.Text>Rs. 4</Card.Text>
                                     {this.state.twokg > 0 ? <p>2 Kg : {this.state.twokg}</p> : <><br /><br /></>}
                                 </Card.Body>

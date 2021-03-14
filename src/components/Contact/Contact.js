@@ -60,9 +60,9 @@ class Contact extends Component {
 
                     <div className="col-lg-4 mb-4">
                         <FadeInSection>
-                            <p><i className="fas fa-map-marker-alt"></i> Address: should be here.</p>
-                            <p><i className="fas fa-mobile-alt"></i> Mobile: 9421336699</p>
-                            <p><i className="far fa-paper-plane"></i> Email: dchobarkar@gmail.com</p>
+                            {/* <p><i className="fas fa-map-marker-alt"></i> Address: should be here.</p> */}
+                            <p><i className="fas fa-mobile-alt"></i> Mobile: 9970113413</p>
+                            <p><i className="far fa-paper-plane"></i> Email: abhangfarms@gmail.com</p>
                         </FadeInSection>
                     </div>
 
