@@ -19,4 +19,4 @@
   Nevigate to the url and go through the menu to order products from the polyhouse
   
 ### Credits  
-* Author - [Darshan Chobarkar](www.linkedin.com/in/dchobarkar)
+* Author - [Darshan Chobarkar](https://www.linkedin.com/in/dchobarkar/)
