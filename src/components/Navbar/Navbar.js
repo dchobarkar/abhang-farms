@@ -1,52 +1,31 @@
-import React, { Component } from 'react';
-import { Nav, Navbar } from 'react-bootstrap';
-import { withRouter, NavLink } from 'react-router-dom';
+import React from "react";
+import { makeStyles } from "@material-ui/styles";
+import { withRouter, NavLink } from "react-router-dom";
 
-import "./Navbar.css";
+import NavbarCSS from "./Navbar.css.js";
 
-class NavBar extends Component {
-    state = {
-        isTop: true
-    }
+// CSS
+const useStyles = makeStyles({ ...NavbarCSS });
 
-    componentDidMount() {
-        document.addEventListener('scroll', () => {
-            const isTop = window.scrollY < 200;
-            if (isTop !== this.state.isTop) {
-                this.setState({
-                    isTop
-                })
-            }
-        })
-    }
+// Driver component
+function Navbar() {
+  const classes = useStyles();
 
-    nextPage = (path) => {
-        this.props.history.push(path)
-    }
+  return (
+    <div className={classes.root}>
+      <NavLink to="/">
+        <div className={classes.logo}>
+          <p className={classes.logoText}>Abhang Farms</p>
+        </div>
+      </NavLink>
 
-    render() {
-        return (
-            <Navbar collapseOnSelect id="abhangfarmsnavbar" className={this.state.isTop ? 'navbarup' : 'navbardown'} expand="md">
-                <Navbar.Brand>
-                    <NavLink className="nav-link" to="/">
-                        <span id="abhang">अभंग</span> Farms
-                    </NavLink>
-                </Navbar.Brand>
-
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto">
-                        <Nav.Link onClick={() => this.nextPage("/")} href="#1" className="nav-link">Home</Nav.Link>
-                        <Nav.Link onClick={() => this.nextPage("/gallery")} href="#2" className="nav-link">Gallery</Nav.Link>
-                        <Nav.Link onClick={() => this.nextPage("/advancebooking")} href="#3" className="nav-link">Advance Booking</Nav.Link>
-                        <Nav.Link onClick={() => this.nextPage("/")} href="#about" className="nav-link">About</Nav.Link>
-                        <Nav.Link onClick={() => this.nextPage("/")} href="#contact" className="nav-link">Contact Us</Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar >
-        )
-    }
+      <NavLink to="/booking">
+        <div className={classes.buyButton}>
+          <p className={classes.buttonText}>Buy</p>
+        </div>
+      </NavLink>
+    </div>
+  );
 }
 
-export default withRouter(NavBar);
+export default withRouter(Navbar);
