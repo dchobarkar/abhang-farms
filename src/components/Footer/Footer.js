@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
 
-import Heart from "../../assests/img/heart.png";
+import Heart from "../../assets/img/heart.png";
 import FooterCSS from "./Footer.css.js";
 
 // CSS

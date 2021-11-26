@@ -1,6 +1,6 @@
 const FooterCSS = {
   root: {
-    height: "80px",
+    minHeight: "5rem",
     padding: "1rem",
     display: "flex",
     justifyContent: "center",
@@ -11,6 +11,9 @@ const FooterCSS = {
 
     "& p": {
       margin: "0",
+      fontFamily: "Lato,sans-serif",
+      fontSize: "var(--text-4)",
+      fontWeight: "normal",
     },
   },
 
