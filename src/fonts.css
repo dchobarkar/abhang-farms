@@ -1,0 +1,49 @@
+/* Chicle */
+@font-face {
+  font-family: "Chicle";
+  src: url("./assets/font/Chicle/Chicle-Regular.ttf") format("ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* Montserrat */
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/font/Montserrat/Montserrat-Regular.ttf") format("ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* Dosis */
+@font-face {
+  font-family: "Dosis";
+  src: url("./assets/font/Dosis/Dosis-Bold.ttf") format("ttf");
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* Lato */
+@font-face {
+  font-family: "Lato";
+  src: url("./assets/font/Lato/Lato-Regular.ttf") format("ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("./assets/font/Lato/Lato-Italic.ttf") format("ttf");
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("./assets/font/Lato/Lato-Bold.ttf") format("ttf");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("./assets/font/Lato/Lato-BoldItalic.ttf") format("ttf");
+  font-style: italic;
+  font-weight: bold;
+}
