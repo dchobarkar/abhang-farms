@@ -2,11 +2,15 @@
   "name": "abhang_farms",
   "version": "0.1.0",
   "description": "Marketing website for AbhangFarms polyhouse",
-  "keywords": ["Polyhouse","Barshi","Capsicum"],
-  "author":"Darshan Chobarkar",
-  "email":"dchobarkar@gmail.com",
-
+  "keywords": [
+    "Polyhouse",
+    "Barshi",
+    "Capsicum"
+  ],
+  "author": "Darshan Chobarkar",
+  "email": "dchobarkar@gmail.com",
   "dependencies": {
+    "@material-ui/styles": "^4.11.4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",

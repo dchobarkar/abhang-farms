@@ -1,20 +1,33 @@
-import React from 'react';
+import React from "react";
+import { makeStyles } from "@material-ui/styles";
 
-import './Footer.css';
+import Heart from "../../assests/img/heart.png";
+import FooterCSS from "./Footer.css.js";
 
-const footer = () => {
-    return (
-        <div id="footer">
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-12">
-                        <p className="center">Made with <i className="fas fa-heart"></i> by Team अभंग Farms &copy; Copyright 2020</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+// CSS
+const useStyles = makeStyles({ ...FooterCSS });
+
+// Driver component
+function Footer() {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <p>
+        Made with <img className={classes.heartImg} src={Heart} alt="Heart" />{" "}
+        by{" "}
+        <a
+          className={classes.developerLink}
+          href="https://www.linkedin.com/in/dchobarkar/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Darshan Chobarkar
+        </a>{" "}
+        &copy; Copyright 2020
+      </p>
+    </div>
+  );
 }
 
-export default footer;
-
+export default Footer;

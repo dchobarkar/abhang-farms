@@ -1,3 +1,9 @@
+:root{
+  --text-white:#FEFEFE;
+  --text-gray:#777777;
+  --background-black:#394141;
+}
+
 html,
 body {
   height: 100%;
@@ -8,6 +14,8 @@ body {
   background-color: #5cdb95;
 
   font-family: "Montserrat";
+
+  font-size: 16px;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
