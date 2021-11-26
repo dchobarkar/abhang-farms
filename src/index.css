@@ -1,7 +1,13 @@
 :root{
+  --text-black:#212121;
   --text-white:#FEFEFE;
+  --text-logo:#8FD974;
   --text-gray:#777777;
+
+  --background-green:#4CA456;
+  --background-button:#09C4B3;
   --background-black:#394141;
+  --background-dark:#026661;
 }
 
 html,
