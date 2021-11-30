@@ -3,8 +3,7 @@
 
 ### Technology Stack
  * HTML  
- * CSS  
- * Bootstrap  
+ * CSS    
  * JavaScript  
  * Based on React library
   
