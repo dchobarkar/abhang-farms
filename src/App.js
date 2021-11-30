@@ -24,7 +24,7 @@ function App() {
     <BrowserRouter>
       <NavBar />
 
-      <Suspense fallback={Spinner}>
+      <Suspense fallback={<Spinner />}>
         <Switch>
           <Route
             path="/"

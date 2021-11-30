@@ -9,15 +9,25 @@ const IntroCSS = {
   },
 
   introduction: {
-    paddingBottom: "0.5rem",
+    paddingBottom: "1.5rem",
     fontFamily: "Lato,sans-serif",
     fontSize: "var(--text-4)",
     fontWeight: "normal",
+    lineHeight: "1.5rem",
+    textAlign: "justify",
     color: "var(--text-white)",
+
+    "& ul": {
+      paddingBottom: "1rem",
+
+      "& li": {
+        paddingBottom: "1rem",
+      },
+    },
   },
 
   header: {
-    padding: "0.5rem",
+    padding: "1.5rem",
     fontFamily: "Dosis,sans-serif",
     fontSize: "var(--mobView-2)",
     fontWeight: "bold",
@@ -34,13 +44,16 @@ const IntroCSS = {
     root: {
       padding: "1rem 4rem",
       flexDirection: "row",
+      justifyContent: "space-between",
     },
 
     introduction: {
+      width: "30vw",
       paddingRight: "0.5rem",
     },
 
     header: {
+      paddingBottom: "2.5rem",
       fontSize: "var(--tabView-2)",
     },
 
@@ -54,13 +67,16 @@ const IntroCSS = {
     root: {
       padding: "3rem 6rem",
       flexDirection: "row",
+      justifyContent: "space-around",
     },
 
     introduction: {
+      width: "30vw",
       paddingRight: "0.5rem",
     },
 
     header: {
+      paddingBottom: "2.5rem",
       fontSize: "var(--tabView-2)",
     },
 

@@ -20,9 +20,8 @@ function Features(props) {
         <img className={classes.image} src={Feature1} alt="Feature 1" />
 
         <p className={classes.text}>
-          Lorem ipsum dolor sit amet, ceteros mediocrem similique te quo, vide
-          error id ius. Et pro postea inimicus gubergren, in iisque alienum his,
-          putant dissentiunt no mel. Est euismod complectitur et, mollis tamquam
+          Plants grown in controlled temperature with less chance of crop damage
+          will be freshly picked and delivered at yours.
         </p>
       </div>
 
@@ -30,9 +29,7 @@ function Features(props) {
         <img className={classes.image} src={Feature2} alt="Feature 2" />
 
         <p className={classes.text}>
-          Lorem ipsum dolor sit amet, ceteros mediocrem similique te quo, vide
-          error id ius. Et pro postea inimicus gubergren, in iisque alienum his,
-          putant dissentiunt no mel. Est euismod complectitur et, mollis tamquam
+          Crops grown throughout the year with no impact of extreme weather.
         </p>
       </div>
 
@@ -40,9 +37,7 @@ function Features(props) {
         <img className={classes.image} src={Feature3} alt="Feature 3" />
 
         <p className={classes.text}>
-          Lorem ipsum dolor sit amet, ceteros mediocrem similique te quo, vide
-          error id ius. Et pro postea inimicus gubergren, in iisque alienum his,
-          putant dissentiunt no mel. Est euismod complectitur et, mollis tamquam
+          Crops grown in enclosed environment free from pests and insects.
         </p>
       </div>
     </section>

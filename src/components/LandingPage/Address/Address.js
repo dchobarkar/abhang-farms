@@ -25,11 +25,11 @@ function Address(props) {
 
       <div className={classes.address}>
         <p>
-          <strong>Mobile :</strong> 9970113413
+          <span>Mobile :</span> 9970113413
         </p>
 
         <p>
-          <strong>Email :</strong> abhangfarms@gmail.com
+          <span>Email :</span> abhangfarms@gmail.com
         </p>
       </div>
     </section>

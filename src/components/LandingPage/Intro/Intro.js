@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
 
-import IntroImg from "../../../assets/img/intro.png";
+import Image from "../../../assets/img/intro.png";
 import IntroCSS from "./Intro.css";
 
 // CSS
@@ -14,33 +14,27 @@ function Intro(props) {
   return (
     <section className={classes.root}>
       <div className={classes.introduction}>
-        <h2 className={classes.header}>Header</h2>
+        <h2 className={classes.header}>Our Smart Approach</h2>
 
         <ul>
+          <li>Crop grown in automated Polyhouse.</li>
+
           <li>
-            Lorem ipsum dolor sit amet, nam eu debitis civibus, vim euripidis
-            quaerendum cu.
+            Use of climate automation systems to bring forth ideal conditions
+            for crop's growth.
           </li>
-          <li>
-            Offendit corrumpit reprimique id quo, est sumo explicari persecuti
-            ei.
-          </li>
-          <li>
-            Eos debet imperdiet eu. Et fabulas consetetur has, ex facer pertinax
-            incorrupte eam. Oblique convenire signiferumque te his.
-          </li>
+
+          <li>Limited use of Chemicals.</li>
         </ul>
 
         <p>
-          Lorem ipsum dolor sit amet, nam eu debitis civibus, vim euripidis
-          quaerendum cu. Offendit corrumpit reprimique id quo, est sumo
-          explicari persecuti ei. Eos debet imperdiet eu. Et fabulas consetetur
-          has, ex facer pertinax incorrupte eam. Oblique convenire signiferumque
-          te his.
+          Amid the climate change consequences disrupting agriculture sector in
+          India, we are trying to tackle the challenges by implementing latest
+          technologies for farming...
         </p>
       </div>
 
-      <img className={classes.image} src={IntroImg} alt="Introduction" />
+      <img className={classes.image} src={Image} alt="Introduction" />
     </section>
   );
 }

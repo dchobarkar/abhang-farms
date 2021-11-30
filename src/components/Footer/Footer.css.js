@@ -19,6 +19,8 @@ const FooterCSS = {
   image: {
     width: "1.2rem",
     height: "1.2rem",
+    position: "relative",
+    top: "4px",
   },
 
   link: {

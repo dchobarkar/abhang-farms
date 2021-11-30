@@ -8,7 +8,7 @@ const AboutCSS = {
     color: "var(--text-black)",
     backgroundColor: "var(--background-white)",
 
-    "& a:hover": {
+    "& a": {
       textDecoration: "none",
     },
   },
@@ -30,12 +30,17 @@ const AboutCSS = {
     color: "var(--text-white)",
   },
 
-  text: {
-    padding: "1rem 2rem",
+  textBox: {
+    padding: "1.5rem 2rem",
     fontFamily: "Lato,sans-serif",
     fontSize: "var(--text-4)",
     fontWeight: "normal",
     textAlign: "justify",
+  },
+
+  text: {
+    paddingBottom: "1rem",
+    lineHeight: "1.5rem",
   },
 
   button: {
@@ -61,8 +66,9 @@ const AboutCSS = {
       fontSize: "var(--tabView-2)",
     },
 
-    text: {
-      padding: "1rem 4rem",
+    textBox: {
+      width: "60vw",
+      padding: "2rem 4rem",
     },
 
     button: {
@@ -83,8 +89,9 @@ const AboutCSS = {
       fontSize: "var(--desView-2)",
     },
 
-    text: {
-      padding: "1rem 6rem",
+    textBox: {
+      width: "60vw",
+      padding: "4rem 6rem",
     },
 
     button: {

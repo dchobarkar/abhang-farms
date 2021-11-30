@@ -15,7 +15,7 @@ function CarouselContainer(props) {
         showStatus={false}
       >
         {props.slides.map((slide, index) => (
-          <div>
+          <div key={index}>
             <img src={slide.img} alt={`slide${index}`} />
           </div>
         ))}

@@ -1,6 +1,6 @@
 const ContactCSS = {
   root: {
-    padding: "2rem 2rem",
+    padding: "3rem 2rem",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -12,6 +12,7 @@ const ContactCSS = {
   },
 
   form: {
+    width: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -19,12 +20,16 @@ const ContactCSS = {
 
     "& label": {
       width: "100%",
+      paddingBottom: "0.5rem",
     },
 
     "& input": {
+      height: "1.75rem",
       width: "100%",
+      padding: "0.5rem",
       marginBottom: "1rem",
       border: "none",
+      borderRadius: "0.5rem",
       backgroundColor: "var(--background-white)",
     },
     "& input:focus-visible": {
@@ -34,8 +39,10 @@ const ContactCSS = {
     "& textarea": {
       height: "8rem",
       width: "100%",
+      padding: "0.5rem",
       marginBottom: "1rem",
       border: "none",
+      borderRadius: "0.5rem",
       backgroundColor: "var(--background-white)",
     },
     "& textarea:focus-visible": {
@@ -44,6 +51,7 @@ const ContactCSS = {
 
     " & button": {
       width: "150px",
+      padding: "0.5rem",
       marginTop: "1rem",
       fontFamily: "Montserrat,sans,serif",
       fontSize: "var(--text-3)",
@@ -57,10 +65,14 @@ const ContactCSS = {
     },
   },
 
+  modalText: {
+    paddingBottom: "1rem",
+  },
+
   /* Tablet view */
   "@media only screen and (min-width: 401px) and (max-width: 960px)": {
     root: {
-      padding: "2rem 4rem",
+      padding: "5rem 4rem",
     },
 
     form: {
@@ -69,10 +81,10 @@ const ContactCSS = {
 
       "& label": {
         width: "30%",
-        marginBottom: "1rem",
       },
 
       "& input": {
+        height: "2rem",
         width: "70%",
         marginBottom: "1rem",
       },
@@ -94,20 +106,20 @@ const ContactCSS = {
   /* Desktop view */
   "@media only screen and (min-width: 961px)": {
     root: {
-      padding: "2rem 6rem",
+      padding: "6rem 6rem",
     },
 
     form: {
-      width: "60vw",
+      width: "50vw",
       flexDirection: "row",
       flexWrap: "wrap",
 
       "& label": {
-        width: "30%",
-        marginBottom: "1rem",
+        width: "20%",
       },
 
       "& input": {
+        height: "2rem",
         width: "70%",
         marginBottom: "1rem",
       },

@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/styles";
 
 import CarouselContainer from "../../../customComponents/Carousel/Carousel";
-import Slides from "./Carousel.list";
+import List from "./Carousel.list";
 import CarouselCSS from "./Carousel.css";
 
 // CSS
@@ -18,7 +18,7 @@ function Carousel() {
         <h1 className={classes.header}>Abhang Farms</h1>
       </div>
 
-      <CarouselContainer slides={[...Slides]} />
+      <CarouselContainer slides={[...List]} />
     </React.Fragment>
   );
 }
