@@ -1,6 +1,6 @@
 const FooterCSS = {
   root: {
-    minHeight: "5rem",
+    minHeight: "4rem",
     padding: "1rem",
     display: "flex",
     justifyContent: "center",
@@ -10,19 +10,18 @@ const FooterCSS = {
     backgroundColor: "var(--background-black)",
 
     "& p": {
-      margin: "0",
       fontFamily: "Lato,sans-serif",
       fontSize: "var(--text-4)",
       fontWeight: "normal",
     },
   },
 
-  heartImg: {
+  image: {
     width: "1.2rem",
     height: "1.2rem",
   },
 
-  developerLink: {
+  link: {
     "&:link,&:visited": {
       textDecoration: "none",
       color: "var(--text-gray)",

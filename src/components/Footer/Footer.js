@@ -14,10 +14,9 @@ function Footer() {
   return (
     <div className={classes.root}>
       <p>
-        Made with <img className={classes.heartImg} src={Heart} alt="Heart" />{" "}
-        by{" "}
+        Made with <img className={classes.image} src={Heart} alt="Heart" /> by{" "}
         <a
-          className={classes.developerLink}
+          className={classes.link}
           href="https://www.linkedin.com/in/dchobarkar/"
           target="_blank"
           rel="noopener noreferrer"
