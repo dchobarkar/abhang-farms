@@ -1,28 +1,47 @@
-:root{
-  --text-black:#212121;
-  --text-white:#FEFEFE;
-  --text-logo:#8FD974;
-  --text-gray:#777777;
+:root {
+  /* Text color */
+  --text-black: #212121;
+  --text-white: #fefefe;
+  --text-logo: #8fd974;
+  --text-gray: #777777;
 
-  --background-green:#4CA456;
-  --background-button:#09C4B3;
-  --background-black:#394141;
-  --background-dark:#026661;
+  /* Background Color */
+  --background-green: #4ca456;
+  --background-button: #09c4b3;
+  --background-black: #394141;
+  --background-dark: #026661;
+  --background-white: #fefefe;
+
+  /* Font size */
+  /* Mobile */
+  --mobView-1: 2rem;
+  --mobView-2: 1.5rem;
+
+  /* Tab */
+  --tabView-1: 3rem;
+  --tabView-2: 2rem;
+
+  /* Des */
+  --desView-1: 5rem;
+  --desView-2: 2.5rem;
+
+  --text-3: 1.2rem;
+  --text-4: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-
-  color: #05386b;
-  background-color: #5cdb95;
-
-  font-family: "Montserrat";
-
-  font-size: 16px;
-
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font-size: 16px;
 }
