@@ -3,12 +3,12 @@ const NavbarCSS = {
     width: "100%",
     padding: "1rem",
     position: "absolute",
-    zIndex: "1",
+    zIndex: "100",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
 
-    "& a:hover": {
+    "& a": {
       textDecoration: "none",
     },
   },
@@ -19,21 +19,20 @@ const NavbarCSS = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: "10rem",
+    borderRadius: "50%",
     backgroundColor: "var(--background-green)",
   },
 
   logoText: {
-    margin: 0,
     fontFamily: "Chicle,sans-serif",
     fontSize: "0.9rem",
     textAlign: "center",
     color: "var(--text-logo)",
   },
 
-  buyButton: {
-    height: "2rem",
-    width: "4rem",
+  button: {
+    height: "2.5rem",
+    width: "4.4rem",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -41,7 +40,6 @@ const NavbarCSS = {
   },
 
   buttonText: {
-    margin: 0,
     fontFamily: "Montserrat,sans-serif",
     fontSize: "var(--text-3)",
     color: "var(--text-black)",
@@ -50,11 +48,11 @@ const NavbarCSS = {
   /* Tablet view */
   "@media only screen and (min-width: 401px) and (max-width: 960px)": {
     root: {
-      padding: "2rem",
+      padding: "2rem 4rem",
       position: "fixed",
     },
 
-    buyButton: {
+    button: {
       height: "3rem",
       width: "5rem",
     },
@@ -63,8 +61,7 @@ const NavbarCSS = {
   /* Desktop view */
   "@media only screen and (min-width: 961px)": {
     root: {
-      padding: "0 3rem",
-      paddingTop: "2rem",
+      padding: "2rem 6rem",
       position: "fixed",
     },
 

@@ -20,7 +20,7 @@ function Navbar() {
       </NavLink>
 
       <NavLink to="/booking">
-        <div className={classes.buyButton}>
+        <div className={classes.button}>
           <p className={classes.buttonText}>Buy</p>
         </div>
       </NavLink>
